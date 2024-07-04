@@ -1,4 +1,6 @@
 
+const Task = require('./../model/taskData')
+
 const PostTask = async (req, res) => {
     const { id: userId } = req.params;
     const { title, priority, todos, dueDate } = req.body;
