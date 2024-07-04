@@ -46,7 +46,7 @@ const GetTask = async (req, res) => {
     }
 
     try {
-        const tasks = await Task.find({ userId: userId });
+        const tasks = await Task.find({ _id: userId });
 
         if (!tasks || tasks.length === 0) {
             return res.status(404).json({ errorMessage: "Tasks not found" });
