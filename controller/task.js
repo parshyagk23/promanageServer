@@ -48,8 +48,8 @@ const GetTask = async (req, res) => {
     }
 
     try {
-        const tasks = await Task.find({ _id: userId });
-
+        const tasks = await Task.find({  userId });
+        console.log(tasks)
         if (!tasks || tasks.length === 0) {
             return res.status(404).json({ errorMessage: "Tasks not found" });
         }
